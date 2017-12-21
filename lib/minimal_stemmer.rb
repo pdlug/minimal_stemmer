@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 # Simple implementation of the "S-Stemmer" (aka English minimal stemmer).
 class MinimalStemmer
   class << self
@@ -8,7 +6,7 @@ class MinimalStemmer
     # @param [String] word the word to stem
     # @return [String] the stemmed word
     def stem(word)
-      if %w(aies eies aes ees oes ss us).any? { |s| word.end_with?(s) }
+      if %w[aies eies aes ees oes ss us].any? { |s| word.end_with?(s) }
         return word
       end
 
